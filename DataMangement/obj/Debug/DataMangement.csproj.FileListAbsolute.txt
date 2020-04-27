@@ -1,0 +1,15 @@
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\DataMangement.exe.config
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\DataMangement.exe
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\DataMangement.pdb
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\EntityFramework.dll
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\Shop_App.exe
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\Shop_App.pdb
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\Shop_App.exe.config
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\EntityFramework.xml
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\obj\Debug\DataMangement.csprojAssemblyReference.cache
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\obj\Debug\DataMangement.csproj.CoreCompileInputs.cache
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\obj\Debug\DataMangement.csproj.CopyComplete
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\obj\Debug\DataMangement.exe
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\DataMangement\obj\Debug\DataMangement.pdb

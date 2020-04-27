@@ -1,0 +1,44 @@
+﻿<Window x:Class="Shop_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl TabStripPlacement="Top">
+            <TabItem Header="Items" Width="75" >
+                <Grid>
+
+                  
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="1*"/>
+
+                    </Grid.RowDefinitions>
+                
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+                        
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton" Click="BuyButton_Click"/>
+                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton" Click="SellButton_Click"/>
+                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay"/>
+                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount"/>
+                  
+                </Grid>
+            </TabItem>
+      
+        </TabControl>
+
+    </Grid>
+</Window>
