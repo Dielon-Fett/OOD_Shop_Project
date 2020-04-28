@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shop_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Shop-App S00187359" Height="450" Width="800" >
     <Grid>
         <TabControl TabStripPlacement="Top">
-            <TabItem Header="Items" Width="75" >
+            <TabItem Header="GamesTop" Width="75" >
                 <Grid>
 
                   
@@ -37,7 +37,97 @@
                   
                 </Grid>
             </TabItem>
-      
+
+            <TabItem Header="Steam" Width="75" >
+                <Grid>
+
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="1*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton2"/>
+                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton2" />
+                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay2"/>
+                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay2"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount2"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Origin" Width="75" >
+                <Grid>
+
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="1*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton3" />
+                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton3" />
+                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay3"/>
+                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay3"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount3"/>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Cex" Width="75" >
+                <Grid>
+
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="1*"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width=".5*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton4" />
+                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton4" />
+                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay4"/>
+                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay4"/>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount4"/>
+
+                </Grid>
+            </TabItem>
+
         </TabControl>
 
     </Grid>
