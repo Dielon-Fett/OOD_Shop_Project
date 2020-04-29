@@ -113,7 +113,7 @@ namespace Shop_App
                         where i.ID == item                        
                         select i.Price;
             float price = query.ToList().First();
-
+            _Date.Text = GetRandomDate(DateTime.Now, DateTime.Now).ToString();
             _Money.Text = string.Format("{0:c}",price);
         }
     }
