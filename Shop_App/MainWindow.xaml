@@ -5,18 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shop_App"
         mc:Ignorable="d"
-        Title="Shop-App S00187359" Height="450" Width="800" >
+        Title="Shop-App S00187359" Height="450" Width="800" Loaded="Window_Loaded_1" >
     <Grid>
         <TabControl TabStripPlacement="Top">
-            <TabItem Header="GamesTop" Width="75" >
+            <TabItem Header="Shop" Width="75" >
                 <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="https://free4kwallpapers.com/uploads/originals/2019/11/13/ultraviolet-wallpaper.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
 
-                  
-                    
+
+
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="7*"/>
                         <RowDefinition Height="1*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".6*"/>
+                        <RowDefinition Height=".5*"/>
+                        <RowDefinition Height=".5*"/>
 
                     </Grid.RowDefinitions>
                 
@@ -27,106 +34,37 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width=".5*"/>
                         
-                    </Grid.ColumnDefinitions>
-
-                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton" Click="BuyButton_Click"/>
-                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton" Click="SellButton_Click"/>
-                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay"/>
-                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay"/>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount"/>
-                  
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="Steam" Width="75" >
-                <Grid>
-
-
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="1*"/>
-
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width=".5*"/>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width=".5*"/>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width=".5*"/>
-
+                       
+                        
                     </Grid.ColumnDefinitions>
+                   
+                    
+                    <Button Grid.Row="4" Grid.Column="7" Content="Buy" Width="150" Height="25" Name="BuyButton" Click="BuyButton_Click"/>
+                    <Button Grid.Row="5" Grid.Column="7" Content="Sell" Width="150" Height="25" Name="SellButton" Click="SellButton_Click"/>
+                    <ListBox Foreground="White" Grid.Row="2" Grid.Column="1" Name="Shops_lbxDisplay" Background="Transparent" SelectionChanged="Shops_lbxDisplay_SelectionChanged" DisplayMemberPath="ShopName" SelectedValuePath="ShopID"/>
+                    <ListBox Foreground="White" Grid.Row="2" Grid.Column="3" Name="Items_lbxDisplay" Background="Transparent" SelectionChanged="Items_lbxDisplay_SelectionChanged" SelectedValuePath="ID" DisplayMemberPath="Name"/>
+                    
+                    <ListBox Foreground="White" Grid.Row="2" Grid.Column="5" Name="Invetory_lbxDisplay" Background="Transparent"/>
+                    <TextBlock Foreground="White" TextAlignment="Center" FontStyle="Italic"  Grid.Row="5" Grid.Column="1" Name="_Date"/>
+                    <TextBlock  Background="Transparent" Foreground="White" Grid.Row="4" Grid.Column="1" Name="_Money" />
+                    <TextBlock  Background="Transparent" Foreground="White" Grid.Row="4" Grid.Column="3" Name="_Location"/>
+                    <TextBlock Foreground="White" Text="Date:" FontStyle="Italic"  Grid.Row="5 " Grid.Column="0" Name="_DateTxt"/>
+                    <TextBlock Foreground="White" Text="Price:"  FontStyle="Italic"  Grid.Row="4" Grid.Column="0" Name="_MoneyTxt"/>
+                    <TextBlock Foreground="White" Text="Shops" FontSize="15" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" Grid.Row="1" Grid.Column="1" Name="Header1"/>
+                    <TextBlock Foreground="White" Text="Items" FontSize="15" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold"  Grid.Row="1" Grid.Column="3" Name="Header2"/>
+                    <TextBlock Foreground="White" Text="Invetory" FontSize="15" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold"  Grid.Row="1" Grid.Column="5" />
+                    <Image Grid.ColumnSpan="1" Grid.Column="7" HorizontalAlignment="Right" Height="150" Margin="0,0,0,50" Grid.Row="2" VerticalAlignment="Bottom" Width="150" Name="logo"/>
 
-                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton2"/>
-                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton2" />
-                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay2"/>
-                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay2"/>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount2"/>
+
 
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Origin" Width="75" >
-                <Grid>
-
-
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="1*"/>
-
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width=".5*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width=".5*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width=".5*"/>
-
-                    </Grid.ColumnDefinitions>
-
-                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton3" />
-                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton3" />
-                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay3"/>
-                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay3"/>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount3"/>
-
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="Cex" Width="75" >
-                <Grid>
-
-
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
-                        <RowDefinition Height="7*"/>
-                        <RowDefinition Height="1*"/>
-
-                    </Grid.RowDefinitions>
-
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width=".5*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width=".5*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width=".5*"/>
-
-                    </Grid.ColumnDefinitions>
-
-                    <Button Grid.Row="0" Grid.Column="1" Content="Buy" Width="100" Height="25" Name="BuyButton4" />
-                    <Button Grid.Row="0" Grid.Column="3" Content="Sell" Width="100" Height="25" Name="SellButton4" />
-                    <ListBox Grid.Row="1" Grid.Column="1" Name="Buy_lbxDisplay4"/>
-                    <ListBox Grid.Row="1" Grid.Column="3" Name="Sell_lbxDisplay4"/>
-                    <TextBlock Grid.Row="2" Grid.Column="1" Name="MoneyCount4"/>
-
-                </Grid>
-            </TabItem>
+           
 
         </TabControl>
 

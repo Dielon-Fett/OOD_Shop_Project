@@ -19,3 +19,5 @@ C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\Shop_App\bin\Debug\EntityFr
 C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\Shop_App\bin\Debug\EntityFramework.xml
 C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\Shop_App\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\Shop_App\obj\Debug\Shop_App.csproj.CopyComplete
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\Shop_App\obj\Debug\Shop_App.Migrations.InitialCreate.resources
+C:\Users\Gaming PC\Documents\GitHub\OOD_Shop_Project\Shop_App\obj\Debug\Shop_App.Migrations.AddShopImg.resources

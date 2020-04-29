@@ -11,6 +11,7 @@ namespace Shop_App
         public int ShopID { get; set; }
         public string ShopName { get; set; }
         public string ShopLocation { get; set; }
+        public string ShopImg { get; set; }
 
         public virtual List<Item> Items { get; set; }
     }
