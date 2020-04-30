@@ -20,6 +20,11 @@ namespace Shop_App
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        List<Shop> allShops = new List<Shop>();
+        List<Item> allItems = new List<Item>();
+
+
         ShopData db = new ShopData();
         static Random r = new Random();
         public MainWindow()
@@ -40,6 +45,26 @@ namespace Shop_App
 
         private void BuyButton_Click(object sender, RoutedEventArgs e)
         {
+            //what has the user selected
+            Item selectedItem = Items_lbxDisplay.SelectedItem as Item;
+
+            if (selectedItem != null)
+            {
+                //Move Item
+                allItems.Remove(selectedItem);
+                Items_lbxDisplay.ItemsSource = null;
+                Items_lbxDisplay.ItemsSource = allItems;
+
+
+
+                //Remove From Shop
+
+
+                //Place in invetory
+
+            }
+
+
 
         }
 
@@ -54,11 +79,12 @@ namespace Shop_App
                         orderby s.ShopID
                         select s;
 
-           
 
-            var shops = query.ToList();
+            allShops = query.ToList();
+
             
-            Shops_lbxDisplay.ItemsSource = shops;
+            
+            Shops_lbxDisplay.ItemsSource = allShops;
 
           
 
@@ -84,7 +110,7 @@ namespace Shop_App
                         select i;
 
 
-
+            allItems = query.ToList();
 
             
            
@@ -94,7 +120,7 @@ namespace Shop_App
             string shopLocation = (Shops_lbxDisplay.SelectedItem as Shop).ShopLocation;
 
             _Location.Text = shopLocation;
-            Items_lbxDisplay.ItemsSource = query.ToList();    
+            Items_lbxDisplay.ItemsSource = allItems;    
             _Date.Text = GetRandomDate(DateTime.Now, DateTime.Now).ToString();
             
 

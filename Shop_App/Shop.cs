@@ -15,4 +15,10 @@ namespace Shop_App
 
         public virtual List<Item> Items { get; set; }
     }
+
+    public class Invetory
+    {
+        public int ID { get; set; }
+        public virtual List<Item> Items { get; set; }
+    }
 }

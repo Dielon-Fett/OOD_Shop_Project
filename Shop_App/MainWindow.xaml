@@ -50,10 +50,12 @@
                     
                     <ListBox Foreground="White" Grid.Row="2" Grid.Column="5" Name="Invetory_lbxDisplay" Background="Transparent"/>
                     <TextBlock Foreground="White" TextAlignment="Center" FontStyle="Italic"  Grid.Row="5" Grid.Column="1" Name="_Date"/>
-                    <TextBlock  Background="Transparent" Foreground="White" Grid.Row="4" Grid.Column="1" Name="_Money" />
-                    <TextBlock  Background="Transparent" Foreground="White" Grid.Row="4" Grid.Column="3" Name="_Location"/>
+                    <TextBlock  Background="Transparent" Foreground="White" TextAlignment="Center" Grid.Row="5" Grid.Column="3" Name="_Money" />
+                    <TextBlock  Background="Transparent" Foreground="White" TextAlignment="Center" Grid.Row="4" Grid.Column="1" Name="_Location"/>
                     <TextBlock Foreground="White" Text="Date:" FontStyle="Italic"  Grid.Row="5 " Grid.Column="0" Name="_DateTxt"/>
-                    <TextBlock Foreground="White" Text="Price:"  FontStyle="Italic"  Grid.Row="4" Grid.Column="0" Name="_MoneyTxt"/>
+                    <TextBlock Foreground="White" Text="Price:"  FontStyle="Italic"  Grid.Row="5" Grid.Column="2" Name="_MoneyTxt"/>
+                    <TextBlock Foreground="White" Text="ID:"  FontStyle="Italic"  Grid.Row="4" Grid.Column="2" Name="_IDTxt"/>
+                    <TextBlock  Foreground="White" Text="Local:"  FontStyle="Italic"  Grid.Row="4" Grid.Column="0" Name="_LocationTxt"/>
                     <TextBlock Foreground="White" Text="Shops" FontSize="15" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold" Grid.Row="1" Grid.Column="1" Name="Header1"/>
                     <TextBlock Foreground="White" Text="Items" FontSize="15" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold"  Grid.Row="1" Grid.Column="3" Name="Header2"/>
                     <TextBlock Foreground="White" Text="Invetory" FontSize="15" TextAlignment="Center" FontStyle="Italic" FontWeight="Bold"  Grid.Row="1" Grid.Column="5" />
