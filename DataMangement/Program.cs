@@ -43,10 +43,14 @@ namespace DataMangement
                 Item I19 = new Item() { ID = 19, Name = "Call Of Duty : Modern Warefare", Price = 39.99f, ShopID = 4, Shop = S4 };
                 Item I20 = new Item() { ID = 20, Name = "Subnautica", Price = 9.99f, ShopID = 4, Shop = S4 };
 
+
+                Shop S5 = new Shop() { ShopName = "Invetory" };
+
                 db.Shops.Add(S1);
                 db.Shops.Add(S2);
                 db.Shops.Add(S3);
                 db.Shops.Add(S4);
+                db.Shops.Add(S5);
 
                 Console.WriteLine("Added Shops to db");
 

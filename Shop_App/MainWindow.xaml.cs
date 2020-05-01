@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,7 +49,7 @@ namespace Shop_App
             //what has the user selected
             Item selectedItem = Items_lbxDisplay.SelectedItem as Item;
 
-            if (selectedItem != null)
+            if (selectedItem != null && selectedItem.ShopID != 5)
             {
                 //Move Item
                 allItems.Remove(selectedItem);
@@ -59,8 +60,13 @@ namespace Shop_App
 
                 //Remove From Shop
 
+                selectedItem.ShopID = 5;
+                db.Items.AddOrUpdate(selectedItem);
+                db.SaveChanges();
 
                 //Place in invetory
+                Invetory_lbxDisplay.ItemsSource = null;
+                Invetory_lbxDisplay.ItemsSource = allItems.Where(i => i.ShopID == 5);
 
             }
 
@@ -70,7 +76,15 @@ namespace Shop_App
 
         private void SellButton_Click(object sender, RoutedEventArgs e)
         {
+            Item selectedItem = Items_lbxDisplay.SelectedItem as Item;
 
+            if (selectedItem != null && selectedItem.ShopID == 5)
+            {
+                allItems.Remove(selectedItem);
+                Items_lbxDisplay.ItemsSource = null;
+                Items_lbxDisplay.ItemsSource = allItems;
+            }
+            
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
@@ -101,7 +115,7 @@ namespace Shop_App
 
             
             
-             int SelectedShopID = Convert.ToInt32(Shops_lbxDisplay.SelectedValue);
+            int SelectedShopID = Convert.ToInt32(Shops_lbxDisplay.SelectedValue);
 
 
             var query = from i in db.Items
@@ -111,9 +125,9 @@ namespace Shop_App
 
 
             allItems = query.ToList();
+            Invetory_lbxDisplay.ItemsSource = allItems.Where(i => i.ShopID == 5);
 
-            
-           
+
             string imageName = (Shops_lbxDisplay.SelectedItem as Shop).ShopImg;
             logo.Source = new BitmapImage(new Uri($"/Images/{imageName}", UriKind.Relative));
 
@@ -139,6 +153,7 @@ namespace Shop_App
                         where i.ID == item                        
                         select i.Price;
             float price = query.ToList().First();
+            
             _Date.Text = GetRandomDate(DateTime.Now, DateTime.Now).ToString();
             _Money.Text = string.Format("{0:c}",price);
         }
